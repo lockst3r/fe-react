@@ -11,9 +11,13 @@ class Toggler extends Component {
   }
 
   changeToggle() {
-    this.setState({
-      text: "On",
-    });
+    this.state.text === "Off"
+      ? this.setState({
+          text: "On",
+        })
+      : this.setState({
+          text: "Off",
+        });
   }
 
   render() {
