@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import Greeting from "./Greeting.jsx";
+import "./index.scss";
 import Login from "./Login.jsx";
 import Logout from "./Logout.jsx";
-import './index.scss';
 
 class Auth extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       isLoggedIn: false,
     };
@@ -26,14 +25,19 @@ class Auth extends Component {
   };
 
   render() {
+    const isLoggedIn = this.state.isLoggedIn;
+    let button;
+
+    if (isLoggedIn) {
+      button = <Logout onClick={this.handleLogout} />;
+    } else {
+      button = <Login onClick={this.handleLogin} />;
+    }
+
     return (
       <div className="panel">
-        <Greeting isLoggedIn={this.state.isLoggedIn} />
-        {this.state.isLoggedIn ? (
-          <Logout onClick={this.handleLogout}/>
-        ) : (
-          <Login onClick={this.handleLogin} />
-        )}
+        <Greeting isLoggedIn={isLoggedIn} />
+        {button}
       </div>
     );
   }

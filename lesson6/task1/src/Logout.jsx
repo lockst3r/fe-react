@@ -1,9 +1,11 @@
-import React from 'react';
-import './index.scss';
+import React from "react";
 
-
-const Logout = (props) =>{
-return  <button className="logout btn" onClick={props.onClick}>logout</button>
-}
+const Logout = (props) => {
+  return (
+    <button className="logout btn" onClick={props.onClick}>
+      logout
+    </button>
+  );
+};
 
 export default Logout;

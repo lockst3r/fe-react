@@ -1,9 +1,11 @@
-import React from 'react';
-import './index.scss';
+import React from "react";
 
-
-const Login = (props) =>{
-return  <button className="login btn" onClick={props.onClick}>login</button>
-}
+const Login = (props) => {
+  return (
+    <button className="login btn" onClick={props.onClick}>
+      login
+    </button>
+  );
+};
 
 export default Login;
