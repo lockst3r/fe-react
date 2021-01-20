@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-const RED = '#f00';
-const GREEN = '#0f0';
-const BLUE = '#00f';
+const CORAL = 'coral';
+const AQUA = 'aqua';
+const BISQUE = 'bisque';
 
 class Colors extends Component {
   setBodyColor = color => {
