@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./index.scss";
 
 class Counter extends Component {
   constructor(props) {
@@ -8,38 +7,45 @@ class Counter extends Component {
       counter: 0,
     };
 
-    this.decrease = this.decrease.bind(this);
-    this.increase = this.increase.bind(this);
+    this.decrement = this.decrement.bind(this);
   }
 
-  decrease() {
-    this.setState({
-      counter: this.state.counter + 1,
-    });
-  }
-
-  increase() {
+  decrement() {
     this.setState({
       counter: this.state.counter - 1,
     });
   }
 
-reset = () => {
-  {
+  increment = () => {
+    this.setState({
+      counter: this.state.counter + 1,
+    });
+  };
+
+  reset() {
     this.setState({
       counter: 0,
     });
-}
-}
+  }
 
   render() {
     return (
-      <div class="counter">
-        <button class="counter__button" onClick={this.increase}>
+      <div className="counter">
+        <button
+          data-action="decrease"
+          className="counter__button"
+          onClick={this.decrement}
+        >
           -
         </button>
-        <span class="counter__value" onClick={()=>this.reset()}>{this.state.counter}</span>
-        <button class="counter__button" onClick={this.decrease}>
+        <span className="counter__value" onClick={() => this.reset()}>
+          {this.state.counter}
+        </span>
+        <button
+          data-action="increase"
+          className="counter__button"
+          onClick={this.increment}
+        >
           +
         </button>
       </div>
