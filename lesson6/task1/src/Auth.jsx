@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Greeting from "./Greeting.jsx";
 import Login from "./Login.jsx";
 import Logout from "./Logout.jsx";
+import './index.scss';
 
 class Auth extends Component {
   constructor(props) {

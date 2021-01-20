@@ -3,7 +3,7 @@ import './index.scss';
 
 
 const Logout = (props) =>{
-return  <button className="logout btn" onClick={props.onClick}>Logout</button>
+return  <button className="logout btn" onClick={props.onClick}>logout</button>
 }
 
 export default Logout;
