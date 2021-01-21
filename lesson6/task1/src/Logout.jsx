@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 const Logout = (props) => {
   return (
-    <button className="logout btn" onClick={props.onClick}>
+    <button className='logout btn' onClick={props.onLogout}>
       logout
     </button>
   );
