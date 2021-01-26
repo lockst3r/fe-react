@@ -1,66 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.scss';
-import UsersList from './UsersList.jsx';
+import React from "react";
+import ReactDOM from "react-dom";
+import UsersList from "./UsersList.jsx";
+import "./index.scss";
 
-const rootElement = document.querySelector('#root');
+const rootElem = document.querySelector("#root");
 
 const users = [
-  {
-      id: 'id-0',
-      age: 21,
-      name: 'Bob',
-  },
-  {
-      id: 'id-1',
-      age: 17,
-      name: 'Tom',
-  },
-  {
-      id: 'id-2',
-      age: 18,
-      name: 'Tad',
-  },
-  {
-      id: 'id-3',
-      age: 45,
-      name: 'Justin',
-  },
-  {
-      id: 'id-4',
-      age: 45,
-      name: 'Franklin',
-  },
-  {
-      id: 'id-5',
-      age: 45,
-      name: 'John',
-  },
-  {
-      id: 'id-6',
-      age: 45,
-      name: 'Andrew',
-  },
-  {
-      id: 'id-7',
-      age: 45,
-      name: 'Pol',
-  },
-  {
-      id: 'id-8',
-      age: 45,
-      name: 'Ron',
-  },
-  {
-      id: 'id-9',
-      age: 45,
-      name: 'Harry',
-  },
-  {
-      id: 'id-10',
-      age: 45,
-      name: 'Anna',
-  },
+  { name: "John", age: 24, id: 0 },
+  { name: "Tom", age: 27, id: 1 },
+  { name: "Sam", age: 23, id: 2 },
+  { name: "Nik", age: 21, id: 3 },
+  { name: "Marti", age: 34, id: 4 },
+  { name: "Jerry", age: 42, id: 5 },
+  { name: "James", age: 17, id: 6 },
 ];
 
-ReactDOM.render(<UsersList users={users} />, rootElement);
+ReactDOM.render(<UsersList users={users} />, rootElem);
